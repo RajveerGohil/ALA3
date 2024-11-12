@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylewear</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Setting up the font-family */
+
+body {
+    font-family: 'Roboto'; /* Choose one of the fonts from the list */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat'; /* Using a different font for headings */
+}
+
+
+
+p,.product-description {
+    font-family: 'Lato', sans-serif; /* Using another font for paragraph and product descriptions */
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  
+  .poppins-semibold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+  }
+  /* nevbar section css start */
+  .nav-section{
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0.8px 0px 1px;
+      /* background-position: ; */
+  }
+    .nav-contenor{
+        /* max-width: 142rem;*/
+         margin: 0 auto; 
+        padding: 1.5rem 1.5rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #5077a2;
+        color:#fff;
+       }
+       .nav-contenor .navbar-logo{
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem; 
+        cursor: pointer;
+        padding-left: 1rem;
+        text-shadow: -1px 2px 3px rgba(236, 247, 76, 0.2);
+        position: relative;
+        display: inline-block;
+    }
+    .nav-contenor .navbar-logo::before{
+        content:'STYLEWEAR' ;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 50%;
+        padding-left: 1rem;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        color: #fbde08; 
+        border-right: 1.5px solid  #fbde08;
+        overflow: hidden;
+        animation: color-chang 3s linear infinite;
+    }
+    @keyframes color-chang{
+        0%{
+            width: 0%;
+            color: #cfbc2d;
+        }50%{
+            width: 100%;
+        }100%{
+            width: 0%;
+        }
+    }
+       
+       .navbar ul{
+        display: flex;
+        /* justify-content: space-between; */
+        list-style: none;
+        gap: 2.5rem;
+
+
+       }
+       .navbar a{
+        font-family: 'Poppins', sans-serif;
+        text-transform: capitalize;
+        font-size: 2.3rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: aliceblue;
+        padding-right: 1rem;
+
+}
+       .navbar a:hover{
+        color: #e2e209e3;
+       }
+ /* nevbar section css end */
+  /* --------------------------------------------------------------- */
+
+ /* hero section start */
+.hero{
+    margin: 0 auto; 
+    padding: 1.5rem 1.5rem;
+    width: 100%; 
+    height: auto;
+    background-color: #BFBEBF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+    background-attachment: fixed;
+}
+.hero-contenor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.hero-logo{
+    height: auto;
+    width: 450px;
+    margin-left: 1.7rem;
+}
+
+   .hero-logo img{
+    height: 45rem;
+    width: auto;
+    border-radius: 30px;
+    border: 2px solid lightcoral;
+    }
+    
+   .hero-contenor #hero-heading{
+    font-family: 'Roboto';
+    /* text-align: center; */
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+    margin-top: 2.5rem;
+    color: #393c75;
+    
+    
+}
+.hero-contenor #sub-heding{
+    font-family: 'Montserrat';
+    text-align:justify;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    margin-top: 2.5rem;
+    color: rgb(111, 26, 26);
+}
+.hero-contenor  #overview{
+    font-family: 'Montserrat';
+    font-family: 'Lato', sans-serif;
+    text-align:justify;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    margin-top: 2rem;
+    color: rgb(43, 44, 43); 
+}
+ .hero-content i{
+   
+    font-size: 8rem
+    
+}
+#t1{
+    color:#EE4E4E;
+}
+#t2{
+    color: #C80036;
+}
+#t3{
+    color: #07fbb6;
+}
+#t4{
+    color: #07264f;
+}
+#t5{
+    color:#E0A75E;
+}
+  /* hero section end */
+
+
+   /* about section start */
+.about{
+    margin: 0 auto; 
+    padding: 1.5rem 1.5rem;
+    width: 100%; 
+    height: auto;
+    background-color: #f0efcb;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+    background-attachment: scroll;
+}
+.about .main-heading-about{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    margin-top: 2rem;
+    color: #742323fb;
+}
+.about-contenor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-logo{
+    height: auto;
+    width: 450px;
+    padding-left: 3rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.about-logo img{
+    height: 45rem;
+    width: auto;
+    border-radius: 30px;
+    border: 2px solid #934267;
+    
+}
+.about-content{
+    padding: 2rem 2rem;
+    margin-top: 3rem;
+}
+.about-content .about-sub-head1{
+    font-family: 'Montserrat';
+    text-align: justify;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    margin-top: 3rem;
+    color: #1c6abc;
+}
+.about-content .about-para1 {
+    font-family: 'Lato', sans-serif;
+    text-align:justify;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+    color:rgb(43, 44, 43); 
+}
+.about-content .about-sub-head2{
+    font-family: 'Montserrat';
+    text-align: justify;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    color: #1c6abc;
+}
+.about-para2{
+    font-family: 'Lato', sans-serif;
+    text-align:justify;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+    color: rgb(43, 44, 43); 
+   
+}
+
+  /* about section end */
+
+  /* about vision mission gole section start */
+ .about-part-2{ 
+  margin: 0 auto; 
+  padding: 1.5rem 1.5rem;
+  width: 100%; 
+  height: auto;
+  background-color: #68d09c;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+  transition: box-shadow 0.3s ease-in-out;
+  background-attachment: fixed;
+}
+.contenor-part-2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+/* .about-div{
+    text-align: center;
+    margin: 15px; */
+
+ .about-div .about-icon{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color:#759db3 ;
+    padding: 1.8rem;
+    margin-left: 15rem;
+    margin-top: 10px;
+    } 
+
+.about-div .about-icon i{
+    
+text-align: center;
+font-size: 38px;
+font-weight: 700;
+color: #2c0585;
+/* padding: 11px; */
+display: grid;
+place-items:center;
+}
+.about-div h3{
+    font-family: 'Lato', sans-serif;
+    text-align:center;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgb(3, 27, 88); 
+    margin-left: 27px;
+}
+.about-div p{
+    font-family: 'Lato', sans-serif;
+    text-align:justify;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+    color: rgb(36, 36, 36); 
+    border-right: 3px solid blanchedalmond;
+    padding: 1rem;
+}
+
+/* about vision mission gole section end */
+
+/* <!----------------------------------------------------------------->
+<!-- our team section start -->*/
+.about-part-3{
+         margin: 0 auto; 
+        padding: 1.5rem 1.5rem;
+        width: 100%; 
+        height: auto;
+        background-color: #8facfa;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        transition: box-shadow 0.3s ease-in-out;
+        background-attachment: scroll;
+      }
+      .about-part-3 .main-heading-about{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        color: #973131;
+      }
+
+.contenor-part-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.about-div-2{
+margin-left: 7rem;
+
+}
+.about-div-2 img{
+    height: 200px;
+    width: 200px;
+    margin-top: 3rem;
+   }
+   .about-div-2 img:hover{
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    transform: scale(1.05);
+    -webkit-transition: transform 0.2s;
+    -moz-transition: transform 0.2s;
+    -ms-transition: transform 0.2s;
+    -o-transition: transform 0.2s;
+    cursor: pointer;
+}
+.about-div-2 .headname{
+    /* text-align: center; */
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+.about-div-2 .headpost{
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    margin-top: 1rem;
+    color: rgb(13, 12, 12);
+}
+
+.about-div-2 .headdeg{
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    margin-top: 1.5rem;
+    color: rgb(13 , 12, 12);
+}
+.about-part-4{
+margin: 0 auto; 
+padding: 1.5rem 1.5rem;
+width: 100%; 
+height: auto;
+background-color: #fff;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+transition: box-shadow 0.3s ease-in-out;
+}
+.about-part-4 .main-heading-about{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+    margin-top: 2rem;
+    color: #973131;
+}
+.about-part-4 .contenor-part-4{
+    width: 100%;
+    height: auto;
+    
+}
+.contenor-part-4 .our-brands{
+    height: 200px;
+    width: auto;
+    padding-left: 1.5%;
+    padding-right: 1%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+ /* <!-- our team section end -->  */
+
+
+/* OUR REVIER SECTION START */
+
+.about-part-REVIEW{
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    height: auto;
+    background-color: #9e9cc3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    -ms-transition: box-shadow 0.3s ease-in-out;
+    -o-transition: box-shadow 0.3s ease-in-out;
+}
+    .about-part-REVIEW .main-heading-about{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        color: #973131;
+    }
+    #main-heading-about{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+    }
+    .writereview{
+        margin: 2.0rem;
+        }
+        .writereview label{
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 3rem;
+            margin: 2rem 0.5rem 2rem 2rem;
+        }
+        .writereview  input[type="text"] {
+            /* Font styles */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+          
+            /* Background and border */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          
+            /* Padding and width */
+            padding: 10px 12px;
+            width: 250px;
+          
+            /* Text alignment */
+            text-align: left;
+          }
+          
+             /* Submit Button Styles */
+     .submit-button {
+    /* Base Styles */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0dcc73;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 2rem;
+  
+    /* Hover Effects */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .submit-button:hover {
+    background-color: #3e5667;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Focus Styles */
+  .submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4a6179;
+  }
+  
+  /* Active Styles */
+  .submit-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+          
+.about-part-REVIEW .contenor-part-REVIEW{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .about-div-review{
+        width: auto;
+        padding: 1rem;
+        margin-left: 1rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        transition: box-shadow 0.3s ease-in-out;
+        background-color: rgb(230, 248, 246);
+        
+    }
+
+    .about-div-review img{
+        margin-left: 15px;
+        text-align: center;
+        height: 120px;
+        width:120px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        margin-left:65px ;
+        margin-top: 15px;
+        margin-bottom: 10px;
+}
+.about-div-review .rname{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    line-height: 1.9rem;
+    margin-top: 0.5rem;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+}
+
+.about-div-review .main-review{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    line-height: 0.5rem;
+    margin-top: 2rem;
+    color: #6f2828;
+    font-family:  sans-serif;
+}
+.about-div-review .review{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    line-height: 2.5rem;
+    margin-top:2rem;
+    color: #222121;
+    font-family:  sans-serif;
+    border-right: 2px solid grey;
+}
+
+    
+/* our client section start */
+.about-part-5{
+    margin: 0 auto; 
+    padding: 1.5rem 1.5rem;
+    width: 100%; 
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+    }
+    .about-part-5 .main-heading-about{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        color: #973131;
+    }
+    .about-part-5 .contenor-part-5{
+        width: 100%;
+        height: auto;
+        
+    }
+    .contenor-part-5 .our-client{
+        height: 200px;
+        width: auto;
+        padding-left: 1.5%;
+        padding-right: 1%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    
+    }
+    /* OUR CLIENT SECTION END */
+
+    /* our product section start */
+    .our-product{
+        margin: 0 auto; 
+        padding: 1.5rem 1.5rem;
+        width: 100%; 
+        height: auto;
+        background-color: #5AD0D4;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .our-product .main-heading-about{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        color: #fff;
+      }
+      .our-product .contenor-part-product{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .about-div-product{
+        margin-left: 7rem;
+    }
+    .about-div-product img{
+        height: 240px;
+        width: 210px;
+        margin-top: 3rem;
+    }
+    .about-div-product img:hover{
+
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+        transform: scale(1.05);
+        -webkit-transition: transform 0.2s;
+        -moz-transition: transform 0.2s;
+        -ms-transition: transform 0.2s;
+        -o-transition: transform 0.2s;
+        cursor: pointer;
+    }
+    .about-div-product span .product-mrp{
+         /* text-align: center; */
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    line-height: 1rem;
+    margin-top: 1.5rem;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    }
+    .about-div-product .our-prise{
+        text-align: justify;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        line-height: 0.5rem;
+        margin-top: 1.5rem;
+        color: rgb(13 , 12, 12);
+    }
+    .about-div-product .product-btn{
+        font-family: 'Poppins', sans-serif;
+     font-size: 12px;
+     font-weight: 600;
+     color: #fff;
+     background-color: #0dcc73;
+     border: none;
+     padding: 12px 24px;
+     cursor: pointer;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     margin-left: 8px;
+    }
+    .gallery-class .galery-btn{
+         
+         background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            padding: 15px 30px;
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 90%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-top: 20px;
+            margin-left: 55px;
+            margin-bottom: 5px;
+             margin-right: 5px;         
+        }
+        
+        .galery-btn:hover {
+            background: linear-gradient(45deg, #f06595, #cc5de8, #845ef7);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .galery-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+            -webkit-transform: translateY(2px);
+            -moz-transform: translateY(2px);
+            -ms-transform: translateY(2px);
+            -o-transform: translateY(2px);
+}
+
+  /* our product section end */
+
+/* contect us section start */
+.contect-us{
+    margin: 0 auto; 
+    padding: 1.5rem 1.5rem;
+    width: 100%; 
+    height: auto;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #cc5de8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.contect-us .main-heading-about{
+    text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 3rem;
+        margin-top: 2rem;
+        color: #fff;
+}
+.contect-us .contenor-part-contect-us{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.contenor-part-contect-us .address{
+    margin: 1rem;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    /* background-color: #ab5994; */
+    border-right: 2px solid rgb(89, 89, 168) ;
+    display: grid;
+    align-items: center;
+}
+
+.address  h1{
+    font-size: 20px;
+    margin: 1.2rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+.address  li{
+    font-size: 19px;
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0.8rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    color: #FFFED3;
+    line-height: 2.5rem;
+}
+.contenor-part-contect-us .form{
+   
+  margin: 10px ;
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+  /* border: 0.5px solid #ccc; */
+  /* background: linear-gradient(45deg, #f06595, #cc5de8); */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2); */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form label{
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0.8rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    color: #333;
+    line-height: 1.7rem;
+}
+.form input[type="text"], .form input[type="email"], .form input[type="tel"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(45deg, #f06595, #cc5de8, #845ef7);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+  /* contect us section end */
+  .footer{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0.8px 0px 1px;
+    background-attachment: fixed;
+    background-color: #566778;
+    
+  }
+  .footer .foot-hed{
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+    /* ------------------------------------------------------------------------------------
+resposive ness designe  for medium screen */
+/* hero section respocivness */
+
+  @media(width<1400){
+    html{
+        font-size: 56.25%;
+    }
+    
+}
+    
+
+  
+  @media(width<1200){
+    html{
+        font-size: 54.25%;
+    
+    }
+  }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">STYLEWEAR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contect Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<main>
+  <section class="hero" id="home-page">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="hero-logo">
+            <img src=https://i.postimg.cc/hvMqZfQJ/logo1.webp alt="my business logo" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="hero-content">
+            <h1 id="hero-heading" class="display-4">WELCOME TO STYLEWEAR, Discover your Style</h1>
+            <p id="sub-heading" class="lead">Explore our exclusive collection of premium t-shirts.</p>
+            <p id="overview">Welcome to STYLEWEAR, our ultimate destination for high-quality, stylish, and comfortable t-shirts. Whether you're looking for casual wear, graphic tees, or trendy designs, we've got you covered. Our mission is to provide you with a diverse range of t-shirts that reflect your personality and style. Discover your new favorite tee today and elevate your wardrobe with our exclusive collections</p>
+            <div class="d-flex justify-content-center">
+              <i class="fa-solid fa-shirt fa-2xl" id="t1"></i>
+              <i class="fa-solid fa-shirt fa-2xl" id="t2"></i>
+              <i class="fa-solid fa-shirt fa-2xl" id="t3"></i>
+              <i class="fa-solid fa-shirt fa-2xl" id="t4"></i>
+              <i class="fa-solid fa-shirt fa-2xl" id="t5"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="about" id="about-page">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="about-content">
+                    <h2 class="about-sub-head1">ABOUT STYLEWEAR</h2>
+                    <p class="about-para1">Welcome to Stylewear, your premier destination for premium t-shirts that combine quality, style, and comfort. At Stylewear, we believe that a t-shirt is more than just a piece of clothing—it's a statement, an expression of individuality, and a cornerstone of any wardrobe.</p>
+                    <h2 class="about-sub-head2">Our Collection:</h2>
+                    <p class="about-para2">We offer a diverse range of t-shirts to suit every style and occasion. Whether you're searching for casual basics, eye-catching graphic tees, or the latest in fashion-forward designs, you'll find it here. Each piece in our collection is thoughtfully designed to reflect current trends while maintaining a timeless appeal. Our Casual Comfort T-Shirt, for instance, is made from 100% organic cotton, providing unmatched softness and breathability for everyday wear.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-logo">
+                    <img src=https://i.postimg.cc/K82H3Z1w/mainlogo.webp alt="my business logo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+  <!-- Reviews Header -->
+  <div class="text-center mb-5">
+      <h2 class="display-4">REVIEW</h2>
+      <hr class="w-25 mx-auto">
+  </div>
+
+  <!-- Review Form -->
+  <div class="row justify-content-center mb-5">
+      <div class="col-md-8">
+          <div class="card shadow-sm">
+              <div class="card-body">
+                  <h3 class="card-title text-center mb-4">Write Your Review</h3>
+                  <form>
+                      <div class="mb-3">
+                          <label for="name" class="form-label">Name:</label>
+                          <input type="text" class="form-control" id="name" placeholder="Enter your Name" required>
+                      </div>
+                      
+                      <div class="mb-3">
+                          <label for="email" class="form-label">E-mail:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                      </div>
+                      
+                      <div class="mb-3">
+                          <label for="message" class="form-label">Message:</label>
+                          <textarea class="form-control" id="message" rows="4" placeholder="Enter Your Review" required></textarea>
+                      </div>
+                      
+                      <div class="text-center">
+                          <button type="submit" class="btn btn-primary px-4">Post Review</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Customer Reviews -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- Review 1 -->
+      <div class="col">
+          <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                      <div class="ms-3">
+                          <h5 class="card-title mb-0">Gohil Rajveer</h5>
+                          <h6 class="text-primary">Stylish and Comfortable!</h6>
+                      </div>
+                  </div>
+                  <p class="card-text">"I recently bought a couple of T-shirts from this site, and I couldn't be happier! The designs are stylish, and the fabric is incredibly soft and comfortable. I've washed them multiple times, and they still look brand new. Definitely my go-to place for T-shirts now!"</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col">
+          <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                      <div class="ms-3">
+                          <h5 class="card-title mb-0">Vahid Mahetar</h5>
+                          <h6 class="text-primary">Fantastic Quality and Service</h6>
+                      </div>
+                  </div>
+                  <p class="card-text">"From start to finish, my experience was amazing! The website was easy to navigate, and the checkout process was a breeze. The T-shirts arrived promptly and were beautifully packaged. The quality exceeded my expectations - durable fabric and vibrant prints. Highly recommend!"</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col">
+          <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                      <div class="ms-3">
+                          <h5 class="card-title mb-0">Chirag</h5>
+                          <h6 class="text-primary">Unique Designs and Great Fit</h6>
+                      </div>
+                  </div>
+                  <p class="card-text">"I love finding unique T-shirts, and this site has the best selection! Each design feels exclusive and original. The fit is perfect, and the material is breathable, making them ideal for any season. I've already recommended this site to all my friends!"</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="col">
+          <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                      <div class="ms-3">
+                          <h5 class="card-title mb-0">Siddharth</h5>
+                          <h6 class="text-primary">Excellent Customer Service</h6>
+                      </div>
+                  </div>
+                  <p class="card-text">"I had a small issue with my order, but the customer service team handled it quickly and professionally. They even included a discount code for my next purchase as an apology. The T-shirts themselves are fantastic - soft, stylish, and true to size. I'm definitely a loyal customer now."</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="about-part-5">
+    <div class="main-heading-about">OUR CLIENTS</div>
+    <div class="contenor-part-5">
+        <marquee behavior="" direction="left"> 
+            <img class="our-client" src=https://i.postimg.cc/Yjcy37b4/Flipkart-Logo.png alt=""> 
+            <img class="our-client" src=https://i.postimg.cc/QN5LFY6B/Amazon-Logo.png alt=""> 
+            <img class="our-client" src=https://i.postimg.cc/Gtps5TgV/Meesho-logo.png alt=""> 
+            <img class="our-client" src=https://i.postimg.cc/HsyLstM3/SHOPEE-LOGO.png alt=""> 
+            <!-- <img src="images (1)_prev_ui.png" alt="" width="160px" height="170px" style="padding-left:1%; padding-right:1%;"> -->
+          </marquee>
+    </div>
+    </section>
+<!-- Contact Us Section -->
+<section class="container py-5" id="contact-us">
+    <div class="text-center mb-5">
+        <h2 class="display-4">CONTACT US</h2>
+    </div>
+    
+    <div class="row">
+        <!-- Address Column -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Head Office:</h3>
+                    <p class="card-text">Survey No. 0, Sidsar Road, Near Iscone Eleven, Bhavnagar, Gujarat 364001</p>
+                    
+                    <h3 class="card-title mt-4">Branch 1:</h3>
+                    <p class="card-text">Main Bajar, Near H.M.Super Mall Umral, Bhavnagar, Gujarat 364330</p>
+                    
+                    <h3 class="card-title mt-4">Branch 2:</h3>
+                    <p class="card-text">Near Kashtbhajan Bricks, Lakhanaka, Vallbhipur, Gujarat 364310</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Form Column -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Enter Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Enter Your Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="contact-no" class="form-label">Enter Your Contact Number:</label>
+                            <input type="tel" class="form-control" id="contact-no" name="contact-no" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; All Rights Reserved By STYLEWEAR & Developed by Gohil Rajveer&Siddarth</p>
+</footer>
+<script>
+    $(document).ready(function() {
+        // Smooth scrolling for navigation links
+        $('.navbar-nav a').on('click', function(event) {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Animate the scroll to the target section
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                // Add hash to the URL when done (default click behavior)
+                window.location.hash = hash;
+            });
+        });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/2G1g3QF1y8m1f9zF1p5n5/3x1u1i5F1x5t5b5" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-5s1qF6HqgA3Z5D8H4gW8D5f5S5f5t5b5g5D5f5D5f5D5f5D5f5D5f5D5f5D5f5" crossorigin="anonymous"></script>
+</body>
+</html>
+                        
